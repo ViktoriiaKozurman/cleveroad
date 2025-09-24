@@ -24,7 +24,7 @@ function updateMarker(lat, lon) {
 
 // Отримання координат ISS
 async function getISSLocation() {
-    const response = await fetch("http://api.open-notify.org/iss-now.json");
+    const response = await fetch("https://api.open-notify.org/iss-now.json");
     const data = await response.json();
     const lat = parseFloat(data.iss_position.latitude);
     const lon = parseFloat(data.iss_position.longitude);
@@ -36,7 +36,7 @@ async function getISSLocation() {
 
 //Екіпаж
 async function getCrew() {
-    const response = await fetch("http://api.open-notify.org/astros.json");
+    const response = await fetch("https://api.open-notify.org/astros.json");
     const data = await response.json();
     const crewList = document.getElementById("crew-list");
     crewList.innerHTML = "";
@@ -68,7 +68,7 @@ function updateTime() {
 
 // Запуск всіх функцій
 async function start() {
-    const response = await fetch("http://api.open-notify.org/iss-now.json");
+    const response = await fetch("https://api.open-notify.org/iss-now.json");
     const data = await response.json();
     const lat = parseFloat(data.iss_position.latitude);
     const lon = parseFloat(data.iss_position.longitude);
