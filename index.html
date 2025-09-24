@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Місцезнаходження МКС</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="data.js"></script>
+      <!-- Підключаю Google Maps API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"></script>
+</head>
+
+<body>
+     <div class="container">
+    <h1>Міжнародна космічна станція (МКС)</h1>
+    <div class="info">
+        <p id="date">Дата: --.--.----</p>
+      <p>Поточні координати:</p>
+      <p id="coords">Широта: ---, Довгота: ---</p>
+      <p>Час (UTC): <span id="time">--:--:--</span></p>
+    </div>
+     <div id="map"></div>
+    <div class="crew">
+      <h2>Екіпаж на МКС</h2>
+      <ul id="crew-list"></ul>
+      <p id="crew-count"></p>
+    </div>
+  </div>
+</body>
+</html>
